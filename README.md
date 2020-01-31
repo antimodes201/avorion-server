@@ -23,7 +23,7 @@ change the volume options to a directory on your node (volume /app) and maybe us
 docker run -it -p 27000-27003:27000-27003/udp -p 27020-27021:27020-27021/udp -p 27000:27000 -v /app/docker/temp-vol:/app \
         -e INSTANCE_NAME="t3stn3t" \
         -e ADMIN="76561198009228194" \
-        --name avorion antimodes201/avorion-server:build
+        --name avorion antimodes201/avorion-server:latest
 ```
 
 The server requires an instance name and initial admin in order to create the save on first boot.  
@@ -38,7 +38,7 @@ docker run -it -p 27000-27003:27000-27003/udp -p 27020-27021:27020-27021/udp -p 
         -e INSTANCE_NAME="t3stn3t" \
         -e ADMIN="76561198009228194" \
 		-e BRANCH="beta" \
-        --name avorion antimodes201/avorion-server:build
+        --name avorion antimodes201/avorion-server:latest
 ```
  
 Currently exposed environmental variables and their default values
