@@ -17,10 +17,10 @@ docker pull antimodes201/avorion-server
 ```
 
 Docker Run with defaults
-change the volume options to a directory on your node and maybe use a different name then the one in the example unless your happy having me as an admin on your server.
+change the volume options to a directory on your node (volume /app) and maybe use a different name then the one in the example unless your happy having me as an admin on your server.
 
 ```
-docker run -it -p 27000-27003:27000-27003/udp -p 27020-27021:27020-27021/udp -p 27000:27000 -v /app/docker/temp-vol:/avorion \
+docker run -it -p 27000-27003:27000-27003/udp -p 27020-27021:27020-27021/udp -p 27000:27000 -v /app/docker/temp-vol:/app \
         -e INSTANCE_NAME="t3stn3t" \
         -e ADMIN="76561198009228194" \
         --name avorion antimodes201/avorion-server:build
@@ -34,7 +34,7 @@ By default the container uses the public release branch of the server package.  
 Example 
  
 ```
-docker run -it -p 27000-27003:27000-27003/udp -p 27020-27021:27020-27021/udp -p 27000:27000 -v /app/docker/temp-vol:/avorion \
+docker run -it -p 27000-27003:27000-27003/udp -p 27020-27021:27020-27021/udp -p 27000:27000 -v /app/docker/temp-vol:/app \
         -e INSTANCE_NAME="t3stn3t" \
         -e ADMIN="76561198009228194" \
 		-e BRANCH="beta" \
